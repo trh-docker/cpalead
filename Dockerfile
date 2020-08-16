@@ -3,7 +3,7 @@ FROM quay.io/spivegin/apache
 WORKDIR /var/www/html 
 
 RUN apt-get update &&\
-    apt-get install -y sqlite3 wget git zip default-libmysqlclient-dev libbz2-dev libmemcached-dev libsasl2-dev libfreetype6-dev libicu-dev libjpeg-dev libmemcachedutil2 libpng-dev libxml2-dev mariadb-client ffmpeg libimage-exiftool-perl python curl python-pip php7.0-zip php7.0-sqlite3 && \
+    apt-get install -y sqlite3 wget git zip default-libmysqlclient-dev libbz2-dev libmemcached-dev libsasl2-dev libfreetype6-dev libicu-dev libjpeg-dev libmemcachedutil2 libpng-dev libxml2-dev mariadb-client ffmpeg libimage-exiftool-perl python curl python-pip php7.0-zip php7.0-sqlite3 nano && \
     apt-get autoclean && apt-get autoremove &&\
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* &&\
     a2enmod rewrite && a2enmod headers
